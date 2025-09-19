@@ -1,0 +1,12 @@
+services:
+  URLShortenerDB:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: URLShortener
+      POSTGRES_PASSWORD: shortener1234
+      POSTGRES_DB: urlshortenerDB
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
